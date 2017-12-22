@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="evgeniy.kurinnoy.courseWorkDB.FillTable">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/Llayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Компьютер"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_computer_inv_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Инвентарный номер"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Характеристики"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_computer_marka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Марка компьютера"
+                android:inputType="textPersonName" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_computer_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Модель компьютера"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_computer_rom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Обьем накопителя"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_computer_ram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Обьем памяти"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Центральный процессор"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_markaCPU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Марка ЦП"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_modelCPU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Модель ЦП"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_freqCPU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Частота"
+                android:inputType="numberDecimal"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_coreCPU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Количество ядер"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Графический процессор"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_markaGPU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Марка ГП"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_modelGPU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Модель ГП"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addComputerButton"
+                android:text="Добавить" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Дополнительное оборудование"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_compInv_num_for_equip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionThreshold="0"
+                android:editable="false"
+                android:focusable="false"
+                android:ems="10"
+                android:hint="Инвентарный номер компьютера"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_equip_inv_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Инвентарный номер доп. оборудования"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Тип оборудования"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_typeEquip_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Название"
+                android:inputType="textPersonName" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_typeEquip_marka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Марка"
+                android:inputType="textPersonName" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_typeEquip_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Модель"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addEquipButton"
+                android:text="Добавить" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Помещение"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_room_numRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="кабинет №"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/et_room_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="площадь"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addRoomButton"
+                android:text="Добавить" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Рабочее место"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_workPlace_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="номер места"
+                android:inputType="number" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_workPlace_numRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="номер кабинета"
+                android:inputType="number" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_workPlace_invNumComp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="false"
+                android:editable="false"
+                android:completionThreshold="0"
+                android:hint="инвентарный номер компьютера"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Сотрудник"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_employee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Имя"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_employee_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Фамилия"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_employee_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="телефон"
+                android:inputType="phone" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_employee_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Должность"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Пользователь"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_user_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Логин"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_user_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Пароль"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/et_user_access"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="18sp"
+                android:text="Права доступа: "
+                android:inputType="textPersonName" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/adminAccess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="radioButtonClickListener"
+                    android:text="Администратор" />
+
+                <RadioButton
+                    android:id="@+id/exAccess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="radioButtonClickListener"
+                    android:text="Расширенные" />
+
+                <RadioButton
+                    android:id="@+id/normalAccess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:onClick="radioButtonClickListener"
+                    android:text="Обычные" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addUserButton"
+                android:text="Добавить" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ПО"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_software_endLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Дата конца лицензии"
+                android:inputType="none" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_software_compInvNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Инвентарынй номер компьютера"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Тип ПО"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_typeSW_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Название"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_typeSW_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Версия"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addSWbutton"
+                android:text="Добавить" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Добавить ПО к должности"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_PosTypeSW_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:completionThreshold="1"
+                android:hint="Должность"
+                android:inputType="textPersonName" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_PosTypeSW_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:completionThreshold="1"
+                android:hint="Название ПО"
+                android:inputType="textPersonName" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_PosTypeSW_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:completionThreshold="0"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Версия"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addPosTypeSW"
+                android:text="Добавить" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
